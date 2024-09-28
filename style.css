@@ -1,0 +1,1038 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f3f3;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    height: 60px;
+    transition: top 0.3s;
+}
+
+/* Left Section (Logo and Search Box) */
+.navbar-left {
+    display: flex;
+    align-items: center;
+
+}
+
+.navbar-left img {
+    height: 40px;
+    margin-right: 20px;
+    /* Space between logo and search box */
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: #dee2f2;
+    border-radius: 4px;
+    padding: 5px 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+}
+
+.search-box img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    /* Spacing between icon and input */
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    padding: 5px;
+    width: 250px;
+    /* Adjust width as needed */
+    border-radius: 20px;
+    /* Match the border radius of the container */
+}
+
+/* Center Section (Navigation Links) */
+.navbar-centre ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    margin-left: -30px;
+}
+
+.navbar-centre ul li {
+    position: relative;
+}
+
+.navbar-centre ul li a {
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    gap: 5px;
+    position: relative;
+}
+
+.navbar-centre ul li a img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Hover Effect: Underline directly below the icon */
+.navbar-centre ul li a:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    background-color: #444cde;
+    width: 40px;
+}
+
+/* Right Section (Action Links) */
+.navbar-right {
+    margin-right: 20px;
+    /* Move the entire right navbar to the left */
+}
+
+.navbar-right ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    padding-left: 0;
+    margin-right: 120px;
+}
+
+.navbar-right ul li {
+    margin-left: 0;
+    position: relative;
+}
+
+.navbar-right ul li a {
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    gap: 5px;
+    position: relative;
+}
+
+
+
+.navbar-right ul li a img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Hover Effect: Underline directly below the icon */
+.navbar-right ul li a:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    background-color: #444cde;
+    width: 40px;
+}
+
+/*------------------------------------------------- navbar ends ----------------------------- */
+
+.container {
+    padding: 20px 12%;
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.left-sidebar {
+    flex-basis: 25%;
+    align-self: flex-start;
+    position: sticky;
+    
+}
+
+.right-sidebar {
+    position: relative;
+    height: 100vh; /* Full height */
+}
+
+.scrollable-sidebar {
+    overflow-y: auto; /* Allow scrolling */
+    height: 100%; /* Full height */
+    padding: 10px;
+}
+
+.main-content {
+    flex-basis: 47%;
+}
+
+.profile-box {
+    width: 225px;
+    height: auto;
+    /* Allow height to adjust based on content */
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Add subtle shadow */
+    overflow: hidden;
+    /* Prevent overflow for rounded corners */
+    margin-bottom: 20px;
+    /* Add space below */
+
+}
+
+.profile-box img {
+    width: 100%;
+    /* Cover image should fill the box */
+    height: 100px;
+    /* Set a fixed height for the cover image */
+    object-fit: cover;
+    /* Maintain aspect ratio */
+}
+
+.profile-info {
+    padding: 4px;
+    /* Increase padding for better spacing */
+
+    background-color: #f8f9fa;
+    /* Light background for profile info */
+}
+
+.profile-info img {
+    width: 90px;
+    border-radius: 50%;
+    background: #ffffff;
+    padding: 4px;
+    border: 2px solid #e9ecef;
+    /* Add a border to the profile picture */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    /* Add shadow to profile picture */
+    margin-top: -55px;
+    /* Maintain original position */
+}
+
+.profile-info h1 {
+    margin-left: 15px;
+    font-size: 1.2em;
+    /* Increase font size */
+    color: #333;
+    /* Darker text for better contrast */
+}
+
+.profile-info p {
+    display: flex;
+    /* Use flexbox for alignment */
+    align-items: center;
+    /* Vertically center the logo and text */
+    margin-left: 15px;
+    margin-top: 5px;
+    font-size: 0.9em;
+    /* Slightly smaller font */
+    color: #777;
+    /* Lighter color for title */
+}
+
+.profile-info h2 {
+    display: flex;
+    /* Use flexbox for alignment */
+    align-items: center;
+    /* Vertically center the logo and text */
+    margin-left: 15px;
+    margin-top: 5px;
+    font-size: 0.9em;
+    /* Slightly smaller font */
+    color: #777;
+    /* Lighter color for title */
+}
+
+.profile-info .logo {
+    width: 23px;
+    /* Adjust the width as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-right: 5px;
+    /* Space between logo and text */
+    margin-top: -1px;
+}
+
+.premium-box {
+    width: 225px;
+    height: auto;
+    /* Allow height to adjust based on content */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Add subtle shadow */
+    overflow: hidden;
+    /* Prevent overflow for rounded corners */
+    margin-bottom: 20px;
+    /* Add space below */
+}
+
+.premium-info {
+    padding: 10px;
+    background-color: #f9fafb;
+    /* Ensure consistent background */
+}
+
+.premium-info .logo {
+    width: 12px;
+    /* Adjust the width as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-right: 5px;
+    /* Space between logo and text */
+    margin-top: -1px;
+}
+
+.premium-info p {
+    display: flex;
+    /* Use flexbox for alignment */
+    align-items: center;
+    /* Vertically center the logo and text */
+    margin-left: 18px;
+    margin-top: 5px;
+    font-size: 0.9em;
+    /* Slightly smaller font */
+    color: #777;
+    /* Lighter color for title */
+}
+
+.info-row {
+    display: flex;
+    /* Use flexbox to align text and numbers */
+    justify-content: space-between;
+    /* Space between text and number */
+    align-items: center;
+    /* Vertically align text and number */
+    margin-bottom: 5px;
+    /* Add spacing between rows */
+}
+
+.info-number {
+    font-weight: bold;
+    /* Emphasize the number */
+    color: #1b1717;
+    /* Dark color for the number */
+    margin-left: 10px;
+    /* Add some space between text and number */
+}
+
+.menu-box {
+    width: 225px;
+    height: auto;
+    /* Allow height to adjust based on content */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Add subtle shadow */
+    overflow: hidden;
+    /* Prevent overflow for rounded corners */
+    margin-bottom: 20px;
+    /* Add space below */
+    font-size: smaller;
+}
+
+.menu-box {
+    padding: 10px;
+    background-color: #f9fafb;
+    /* Ensure consistent background */
+}
+
+.menu-box .logo {
+    width: 12px;
+    /* Adjust the width as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-right: 15px;
+    /* Space between logo and text */
+    margin-top: -1px;
+}
+
+.menu-box p {
+    display: flex;
+    /* Use flexbox for alignment */
+    align-items: center;
+    /* Vertically center the logo and text */
+    margin-left: 18px;
+    margin-top: 5px;
+
+    font-size: 0.9em;
+    /* Slightly smaller font */
+    color: #777;
+    /* Lighter color for title */
+}
+
+
+.menu-info p {
+    color: #1b1717;
+    font-weight: bolder;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.menu-info p {
+    color: #1b1717;
+    font-weight: bolder;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.menu-info p:hover {
+    text-decoration: underline;
+}
+
+.info-row p {
+    color: #1b1717;
+    font-weight: bolder;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.info-row p:hover {
+    text-decoration: underline;
+}
+
+.reactivate-premium:hover {
+    text-decoration: underline;
+}
+
+
+.news-box {
+    width: 300px;
+    height: auto;
+    /* Allow height to adjust based on content */
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Add subtle shadow */
+    overflow: hidden;
+    /* Prevent overflow for rounded corners */
+    margin-bottom: 20px;
+    /* Add space below */
+}
+
+.news-box-head {
+    display: flex;
+    /* Use flexbox to align text and numbers */
+    justify-content: space-between;
+    /* Space between text and number */
+    align-items: center;
+    /* Vertically align text and number */
+    margin-bottom: 5px;
+    /* Add spacing between rows */
+    padding: 15px 25px;
+}
+
+.top-stories {
+    margin-left: 25px;
+    margin-top: -12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #777;
+    cursor: pointer;
+}
+
+.news-title {
+    display: flex;
+    /* Use flexbox to align text and numbers */
+    justify-content: space-between;
+    /* Space between text and number */
+    align-items: center;
+    /* Vertically align text and number */
+    margin-bottom: 5px;
+    /* Add spacing between rows */
+    padding: 15px 25px;
+    cursor: pointer;
+
+
+}
+
+.news-title-update {
+    margin-left: 25px;
+    margin-top: -18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #777;
+    font-size: smaller
+}
+
+.news-title :hover {
+    background-color: #c4c4c4;
+}
+
+.news-title-update::before {
+    content: '\2022';
+    /* Unicode for bullet point */
+    margin-right: 5px;
+}
+
+.dropbtn {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 12px 20px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: -3px;
+
+
+}
+
+/* Hover and focus effects for button */
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: #fdfdfd;
+
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 20px;
+    color: #988d8d;
+}
+
+/* Dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    max-height: 0;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for dropdown links */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #ffffff;
+}
+
+/* Show the dropdown */
+.show {
+    display: block;
+    max-height: 500px;
+    opacity: 1;
+}
+
+.news-box-puzzles p {
+    margin-left: 25px;
+    margin-top: 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #777;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.hidden-news {
+    display: none;
+}
+
+.puzzle-item :hover {
+    background-color: #e7e7e7;
+}
+
+.ad-box {
+    width: 300px;
+    height: auto;
+    /* Allow height to adjust based on content */
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Add subtle shadow */
+    overflow: hidden;
+    /* Prevent overflow for rounded corners */
+    margin-bottom: 20px;
+    /* Add space below */
+}
+
+.ad-box img {
+    width: 100%;
+    /* Cover image should fill the box */
+    height: 70px;
+    /* Set a fixed height for the cover image */
+    object-fit: cover;
+    /* Maintain aspect ratio */
+}
+
+.ad-info img {
+    width: 70px;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-top: -60px;
+    background: #ffffff;
+    padding: 2px;
+    border: 1px solid #e9ecef;
+    /* Add a border to the profile picture */
+}
+
+.company-name {
+    margin-left: 23px;
+    font-weight: 600;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.company-info {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 23px;
+    margin-top: 2px;
+    font-size: 14px;
+}
+
+.follow-ask {
+
+    margin-left: 23px;
+    font-size: 11px;
+    color: #988d8d;
+    margin-top: 4px;
+}
+
+.connections-follow p {
+    display: flex;
+    /* Use flexbox for alignment */
+    align-items: center;
+    /* Vertically center the logo and text */
+    margin-left: 12px;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #777;
+    /* Lighter color for title */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.connections-follow .logo {
+    width: 12px;
+    /* Adjust the width as needed */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-right: 5px;
+    /* Space between logo and text */
+    margin-left: 10px;
+    margin-top: -1px;
+}
+
+.follow-button {
+    background-color: #ffffff;
+    /* LinkedIn-like blue */
+    color: blue;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 20px auto;
+    /* Add margin to separate it from other elements */
+    display: block;
+    /* Ensures the button respects the auto margin */
+    transition: background-color 0.3s ease;
+    width: 270px;
+
+    border: 1px solid
+}
+
+.follow-button:hover {
+    background-color: #afc1cb;
+    /* Darken the button on hover */
+}
+
+.footer-box {
+    width: 300px;
+    height: 200px;
+    /* Allow height to adjust based on content */
+    background-color: f4f3f3;
+    border-radius: 15px;
+    overflow: hidden;
+    /* Prevent overflow for rounded corners */
+    margin-bottom: 20px;
+    /* Add space below */
+    padding: 10px 20px;
+    font-size: 12px;
+    color: #777;
+
+}
+
+.footer-row {
+    display: flex;
+    justify-content: center;
+    /* Adjust space between items */
+    align-items: center;
+    /* Align items vertically in the center */
+    padding: 10px 10px;
+    gap: 20px;
+}
+
+.footer-row p {
+    margin: 0;
+    /* Remove default margins for p tags */
+    padding: 0;
+    cursor: pointer;
+}
+
+.footer-row p:hover {
+    color: #5835e1;
+    /* Change text color on hover */
+    text-decoration: underline;
+    /* Add underline on hover */
+}
+
+/*------------------------------------------------- right-sidebar ends ----------------------------- */
+
+.new-posting {
+    width: 500px;
+    height: auto;
+    background-color: white;
+    border-radius: 15px;
+    margin-right: 60px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Added a subtle shadow for a clean look */
+}
+
+.type-post {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+.type-post img {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    /* Space between the image and the text box */
+}
+
+.type-post-text-box {
+    flex: 1;
+    /* Makes the input take the remaining space */
+    border-radius: 15px;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-color: #625f6f;
+
+}
+
+.type-post-text-box::placeholder {
+    color: #888;
+    /* Lighter color for placeholder text */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.type-post-text-box:focus {
+
+    background-color: #e5e3e3;
+    /* Slightly lighter background on focus */
+}
+
+.type-post {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.type-post img {
+    margin-right: 10px;
+}
+
+
+.post-options {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    margin-top: -20px;
+
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.option img {
+    margin-right: 5px;
+}
+
+.option span {
+    font-size: 16px;
+    color: #333;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.post-options :hover {
+    background-color: #d1d1d1;
+}
+
+.sort-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 14px;
+    position: relative;
+    /* Required for the dropdown positioning */
+    margin-top: -20px;
+    font-size: 14px;
+    margin-right: 60px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Dropdown button styling */
+.dropdown-btn {
+    background-color: #f4f3f3;
+    color: rgb(0, 0, 0);
+    padding: 5px 5px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    margin-left: -17px;
+    margin-top: -20px;
+    font-size: 12px;
+}
+
+.dropdown-btn:hover {
+    text-decoration: underline;
+}
+
+.post-profile-details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.posts-section {
+    width: 500px;
+    margin-top: 15px;
+    height: auto;
+    background-color: white;
+    border-radius: 15px;
+    padding: 13px 15px;
+    margin-right: 60px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Added a subtle shadow for a clean look */
+}
+
+/* Container for profile details */
+.post-profile-details {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Profile picture styling */
+.profile-photo {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    /* Space between the photo and text */
+}
+
+/* Container for name, institute, and time */
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    /* Align details in a vertical stack */
+
+}
+
+/* Name styling */
+.name {
+    font-weight: bold;
+    font-size: 15px;
+    color: #333;
+}
+
+/* Institute styling */
+.institute {
+    font-size: 12px;
+    margin-top: 3px;
+    color: #666;
+}
+
+/* Time styling */
+.time {
+    font-size: 12px;
+    margin-top: 5px;
+    color: #999;
+}
+
+.more-button {
+    font-size: 10px;
+    cursor: pointer;
+    color: #888;
+}
+
+.more-button:hover {
+    color: #444cde;
+    text-decoration: underline;
+}
+
+.post-content-caption p:nth-of-type(2) {
+    display: none;
+}
+
+.image-1 {
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 49%;
+    height: 100%;
+}
+
+.post-content-photos {
+    width: 100%;
+}
+
+.image-2 {
+    margin-top: 10px;
+    float: right;
+    width: 49%;
+    height: 170px;
+    border-radius: 5px;
+
+}
+
+.image-3 {
+    margin-top: 10px;
+    width: 49%;
+    height: 170px;
+    float: right;
+    margin-top: -173px;
+    border-radius: 5px;
+}
+
+.likes-and-comments img {
+    margin-top: 5px;
+
+}
+
+.number-of-comments {
+    float: right;
+    font-size: small;
+    margin-right: 2px;
+    color: #666;
+    margin-top: -17px;
+}
+
+.post-interractions {
+    display: flex;
+    justify-content: space-around;
+    /* Space out items evenly */
+    padding-top: 10px;
+    margin-top: -20px;
+    width: 100%;
+    /* Ensure it takes up full width */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.interaction {
+    display: flex;
+    flex-direction: row;
+    /* Stack the icon and text vertically */
+    align-items: center;
+    /* Center the text and icon horizontally */
+}
+
+.interaction :hover {
+    color: #5835e1;
+    cursor: pointer;
+}
+.image-4{
+    margin-top: 10px;
+    width: 49%;
+    height: 100%;
+    border-radius: 5px;
+
+}
+.image-5{
+    margin-top: 10px;
+    width: 49%;
+    height: 100%;
+    float: right;
+    border-radius: 5px;
+}
+.image-6{
+    margin-top: 10px;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    
+}
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .navbar-centre ul {
+        display: none;
+    }
+
+    .navbar-centre .dropdown {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .navbar-centre ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .navbar-centre li {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-sidebar, .right-sidebar {
+        display: none;
+    }
+}
